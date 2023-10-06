@@ -1,0 +1,107 @@
+/* Стили для темной темы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(14, 22, 33); /* Цвет фона */
+    color: white; /* Цвет обычного текста */
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    text-align: left; /* Центрирование кнопок по горизонтали */
+}
+
+.navigation a {
+    display: inline-block; /* Превращение ссылок в блочные элементы для настройки ширины и высоты */
+    padding: 10px 20px; /* Внутренний отступ кнопок */
+    margin: 5px; /* Внешний отступ кнопок */
+    text-decoration: none; /* Убрать подчеркивание ссылок */
+    background-color: rgb(24, 37, 51); /* Цвет фона кнопок */
+    color: white; /* Цвет текста на кнопках */
+    border-radius: 5px; /* Скругление углов кнопок */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета фона при наведении */
+}
+
+.navigation a:hover {
+    background-color: rgb(90, 140, 183); /* Цвет фона при наведении курсора */
+}
+
+.tabs {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(24, 37, 51); /* Цвет интерфейса */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.tab-button {
+    margin: 5px;
+    padding: 20px 20px;
+    background-color: rgb(24, 37, 51); /* Цвет интерфейса */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white; /* Цвет текста на вкладках */
+}
+
+.tab-button.active {
+    background-color: rgb(90, 140, 183); /* Цвет активной вкладки */
+}
+
+.art-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 10px;
+    justify-content: center; /* Горизонтальное центрирование по оси X */
+    gap: 30px; /* Расстояние между контейнерами */
+}
+
+.art {
+    margin: 15px 0; /* Горизонтальный margin становится нулевым, и контейнеры автоматически распределяются */
+    padding: 10px;
+    background-color: rgb(24, 37, 51);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: pointer;
+    width: calc(50% - 20px); /* Рассчитываем ширину контейнера, учитывая margin */
+    max-width: 128px; /* Максимальная ширина контейнера */
+    height: 192px;
+}
+
+.art img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.caption {
+    font-size: 14px;
+    color: rgb(90, 140, 183); /* Цвет текста, который копируется */
+    max-width: 18ch; /* Максимальная ширина в 10 символов */
+    white-space: normal; /* Разрешение переноса текста на следующую строку */
+    word-wrap: break-word; /* Разрыв слов для переноса текста */
+}
+
+/* Стили для выделения при нажатии */
+.art.selected {
+    background-color: rgb(90, 140, 183); /* Цвет выделения */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 70px;
+    border-radius: 5px;
+    z-index: 1;
+    width: 50%; /* Растянуть фон на всю ширину */
+}
+
+.popup-text {
+    display: block;
+    text-align: center;
+}
