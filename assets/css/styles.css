@@ -19,7 +19,7 @@ body {
     font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--tg-theme-bg-color); /* Цвет фона */
     color: var(--tg-theme-text-color); /* Цвет обычного текста */
-    min-height: 100vh;
+    min-height: var(--tg-viewport-height);
     width: 100%;
 }
 a {
@@ -33,7 +33,7 @@ a:hover {
     padding: 0px 20px;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: var(--tg-viewport-height);
     flex-direction: column;
 }
 
@@ -75,7 +75,7 @@ h1 {
     rigt: 0;    
     display: flex;
     align-items: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.2); 
     background-color: var(--tg-theme-bg-color);
     height: 45px;
 }
