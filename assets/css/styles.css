@@ -50,7 +50,7 @@ h1 {
     color: var(--tg-theme-button-text-color);
     display: block;
     border-radius: 6px;
-    padding: 10px 20px;
+    padding: 10px 0;
     /* width: calc(100% - 60px); */
     text-decoration: none;
     text-align: center;
