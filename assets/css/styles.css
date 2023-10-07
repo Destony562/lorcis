@@ -61,6 +61,8 @@ h1 {
     left: 10px;
     right: 10px;
     cursor: pointer;
+    outline: none;
+    border: none;
 }
 .fullbtn:hover, .btn:hover {
     filter: brightness(.8)
@@ -74,7 +76,7 @@ h1 {
     display: flex;
     align-items: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    background-color: var(--tg-theme-secondary-bg-color);
+    background-color: var(--tg-theme-bg-color);
     height: 45px;
 }
 
