@@ -25,9 +25,7 @@ body {
 a {
     text-decoration: none;
 }
-a:hover {
-    background-color: transparent;
-}
+
 .content {
     text-align: center;
     padding: 0px 20px;
@@ -65,7 +63,8 @@ h1 {
     border: none;
 }
 .fullbtn:hover, .btn:hover {
-    filter: brightness(.8)
+    filter: brightness(.8);
+    background-color: var(--tg-theme-button-color);
 }
 .navigation {
     width: 100%;
@@ -198,10 +197,10 @@ h1 {
     background-color: rgb(14, 22, 33);
     color: white;
     border-radius: 10px;
-    border: none; /* Убираем границу */
-    /* float: right;
-    margin-right: -10px; /* Добавляем небольшой внутренний отступ справа, чтобы создать пространство между текстом и кнопкой */
-
+    border: none;
+    float: right;
+    margin-right: -10px;
+} */
 
 
 
