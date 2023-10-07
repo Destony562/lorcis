@@ -20,7 +20,7 @@ body {
     font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--tg-theme-bg-color); /* Цвет фона */
     color: var(--tg-theme-text-color); /* Цвет обычного текста */
-    min-height: var(--tg-viewport-height);
+    min-height: var(--tg-viewport-stable-height);
     width: 100%;
 }
 a {
@@ -32,7 +32,7 @@ a {
     padding: 0px 20px;
     display: flex;
     justify-content: center;
-    height: var(--tg-viewport-height);
+    height: var(--tg-viewport-stable-height);
     flex-direction: column;
     position: relative;
 }
