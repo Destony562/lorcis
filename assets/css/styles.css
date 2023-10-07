@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-:root {
+/* :root {
     --tg-theme-bg-color: rgb(14, 22, 33);
     --tg-theme-text-color: white;
     --tg-theme-hint-color: lightgray;
@@ -9,7 +9,7 @@
     --tg-theme-button-text-color: white;
     --tg-theme-secondary-bg-color: rgb(24, 37, 51);
     --tg-viewport-height: 100vh;
-}
+} */
 
 * {
     margin: 0;
@@ -80,11 +80,12 @@ h1 {
     height: 45px;
 }
 
-.navigation>div {
+.navigation>a {
     width: 100%;
     text-align: center;
+    display: block;
 }
-.navigation>div>a {
+.navigation>a>span {
     display: inline-block;
     text-align: center;
     color: var(--tg-theme-hint-color);
@@ -97,13 +98,13 @@ h1 {
     transition: .2s;
 }
 
-.navigation>div>a:hover:not(.active) {
+.navigation>a:hover>span:not(.active) {
     filter:brightness(1);
     background-color: transparent;
     border-color:  var(--tg-theme-hint-color);
 }
 
-.navigation>div>a.active {
+.navigation>a>span.active {
     color: var(--tg-theme-link-color);
     border-bottom: 2px solid var(--tg-theme-link-color);
     filter:brightness(1);
