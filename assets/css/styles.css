@@ -34,7 +34,6 @@ a {
     justify-content: center;
     height: var(--tg-viewport-stable-height);
     flex-direction: column;
-    position: relative;
 }
 
 h1 {
