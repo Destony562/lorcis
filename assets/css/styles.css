@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --tg-theme-bg-color: rgb(14, 22, 33);
+    --tg-theme-text-color: white;
+    --tg-theme-hint-color: lightgray;
+    --tg-theme-link-color: lightblue;
+    --tg-theme-button-color: lightblue;
+    --tg-theme-button-text-color: white;
+    --tg-theme-secondary-bg-color: rgb(24, 37, 51);
+    --tg-viewport-height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--tg-theme-bg-color); /* Цвет фона */
+    color: var(--tg-theme-text-color); /* Цвет обычного текста */
+    min-height: var(--tg-viewport-stable-height);
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+.content {
+    text-align: center;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    height: var(--tg-viewport-stable-height);
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+.hint {
+    color: var(--tg-theme-hint-color);
+    font-size: 75%;
+}
+
+.fullbtn {
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    display: block;
+    border-radius: 6px;
+    padding: 10px 0;
+    /* width: calc(100% - 60px); */
+    text-decoration: none;
+    text-align: center;
+    transition: .2s;
+    position: fixed;
+    bottom: 30px;
+    left: 10px;
+    right: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.fullbtn:hover, .btn:hover {
+    filter: brightness(.8);
+    background-color: var(--tg-theme-button-color);
+}
+.navigation {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;    
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.2); 
+    background-color: var(--tg-theme-bg-color);
+    height: 45px;
+}
+
+.navigation>a {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+.navigation>a>span {
+    display: inline-block;
+    text-align: center;
+    color: var(--tg-theme-hint-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 43px;
+    filter:brightness(.8);
+    margin-top: 2px;
+    border-bottom: 2px solid transparent;
+    transition: .2s;
+}
+
+.navigation>a:hover>span:not(.active) {
+    filter:brightness(1);
+    background-color: transparent;
+    border-color:  var(--tg-theme-hint-color);
+}
+
+.navigation>a>span.active {
+    color: var(--tg-theme-link-color);
+    border-bottom: 2px solid var(--tg-theme-link-color);
+    filter:brightness(1);
+}
+
+.art-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-content: center; /* Горизонтальное центрирование по оси X */
+    gap: 30px; /* Расстояние между контейнерами */
+    margin: 15px 20px ;
+}
+
+
+
+.art { 
+    cursor: pointer;
+    width: calc(50% - 30px);
+}
+
+.art>img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    border: 2px solid var(--tg-theme-secondary-bg-color);
+}
+
+.art>.caption {
+    font-size: 14px;
+    color: var(--tg-theme-link-color);
+    width: 100%;
+    text-align: center;
+}
+
+/* Стили для выделения при нажатии */
+.art.selected {
+    background-color: rgb(90, 140, 183); /* Цвет выделения */
+}
+
+
+
+.popup {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(38, 38, 38, 0.9);
+    z-index: 1;
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(219, 218, 218);
+}
+
+.popup-text {
+    margin: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}
+
+.popup-tags {
+    font-size: 13px;
+}
+#popupteg {
+    color: var(--tg-theme-link-color);
+    cursor: pointer;
+}
+
+#popupImage {
+    max-width: 70vw;
+    max-height: 60vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.popup>div {
+    text-align: center;
+}
+
+/* #closeButton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    background-color: rgb(14, 22, 33);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    float: right;
+    margin-right: -10px;
+} */
+
+
+
+.popup-message {
+    transition: .3s;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(43, 43, 43, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 9999;
+}

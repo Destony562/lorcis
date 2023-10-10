@@ -3,55 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>Позы</title>
 </head>
 <body>
     <div class="navigation">
-        <a href="characters.html">Персонажи</a>
-        <a href="styles.html">Стили</a>
+        <a href="styles.html"><span>Стили</span></a>
+        <a href="poses.html"><span class="active">Позы</span></a>
+        <a href="characters.html"><span>Персонажи</span></a>
     </div>
     <div class="art-container">
         <div class="art">
-            <img src="image_pose/missionary.jpg" alt="Миссионерская" teg="доп тегов нет" teg="доп тегов нет" width="256" height="384">
-            <p class="caption">&lt;lora:POVMissionary:0.7&gt;</p>
+            <img src="assets/images/pose/missionary.jpg" alt="Миссионерская" tag="отсутствуют." tag="отсутствуют." width="256" height="384">
+            <p class="caption" alt="&lt;lora:POVMissionary:0.7&gt;">Миссионерская</p>
         </div>
         <div class="art">
-            <img src="image_pose/doggy.jpg" alt="Догги стайл" teg="доп тегов нет" width="256" height="384">
-            <p class="caption">&lt;lora:doggystyle_piledriver_v0.3:0.7&gt;</p>
+            <img src="assets/images/pose/doggy.jpg" alt="Догги стайл" tag="отсутствуют." width="256" height="384">
+            <p class="caption" alt="&lt;lora:doggystyle_piledriver_v0.3:0.7&gt;">Догги стайл</p>
         </div>
         <div class="art">
-            <img src="image_pose/doggy_2.jpg" alt="Догги стайл(стоя)" teg="доп тегов нет" width="256" height="384">
-            <p class="caption">&lt;lora:DOGGY3rd:0.7&gt;</p>
+            <img src="assets/images/pose/doggy_2.jpg" alt="Догги стайл(стоя)" tag="отсутствуют." width="256" height="384">
+            <p class="caption" alt="&lt;lora:DOGGY3rd:0.7&gt;">Догги стайл(стоя)</p>
         </div>
         <div class="art">
-            <img src="image_pose/pov.jpg" alt="Наездница" teg="доп тегов нет" width="256" height="384">
-            <p class="caption">&lt;lora:pov_cowg_bg_v1:0.7&gt;</p>
+            <img src="assets/images/pose/pov.jpg" alt="Наездница" tag="отсутствуют." width="256" height="384">
+            <p class="caption" alt="&lt;lora:pov_cowg_bg_v1:0.7&gt;">Наездница</p>
         </div>
         <div class="art">
-            <img src="image_pose/stuck.jpg" alt="глори волл" teg="доп теги - glory wall, through wall, stationary restraints, photo(object)" width="256" height="384">
-            <p class="caption">&lt;lora:glory_wall:0.7&gt;</p>
+            <img src="assets/images/pose/stuck.jpg" alt="Глори волл" tag=" glory wall, through wall, stationary restraints, photo(object)" width="256" height="384">
+            <p class="caption" alt="&lt;lora:glory_wall:0.7&gt;">Глори волл</p>
         </div>
         <div class="art">
-            <img src="image_pose/wood.jpg" alt="Деревянные оковы" teg="доп тегов нет" width="256" height="384">
-            <p class="caption">&lt;lora:Concept-pilloryV2:0.7&gt;</p>
+            <img src="assets/images/pose/wood.jpg" alt="Деревянные оковы" tag="отсутствуют." width="256" height="384">
+            <p class="caption" alt="&lt;lora:Concept-pilloryV2:0.7&gt;">Деревянные оковы</p>
         </div>
         <div class="art">
-            <img src="image_pose/stay_2.jpg" alt="стоя" teg="доп тегов нет" width="256" height="384">
-            <p class="caption">&lt;lora:folded_anal_sex:0.7&gt;</p>
+            <img src="assets/images/pose/stay_2.jpg" alt="Стоя" tag="отсутствуют." width="256" height="384">
+            <p class="caption" alt="&lt;lora:folded_anal_sex:0.7&gt;">Стоя</p>
         </div>
         <div class="art">
-            <img src="image_pose/dush.jpg" alt="в душе" teg="доп тегов нет" width="256" height="384">
-            <p class="caption">&lt;lora:against_glass:0.7&gt;</p>
+            <img src="assets/images/pose/dush.jpg" alt="В душе" tag="отсутствуют." width="256" height="384">
+            <p class="caption" alt="&lt;lora:against_glass:0.7&gt;">В душе</p>
         </div>
         <!-- Добавьте другие арты и подписи -->
     </div>
     <div class="popup" id="popup">
         <img src="" alt="Изображение" id="popupImage"> <!-- Изображение -->
-        <span class="popup-text" id="popupText"></span>
-        <span class="popup-text" id="popupteg"></span>
-        <button id="closeButton">Закрыть</button>
+        <h2 class="popup-text" id="popupText"></h2>
+        <div>
+            <span class="popup-tags">Дополнительные теги: </span>
+            <span class="popup-tags" id="popupteg"></span>
+        </div>
+        <button id="closeButton" class="fullbtn">Закрыть</button>
     </div>
-    <script src="scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
 </body>
 </html>
